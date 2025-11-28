@@ -65,14 +65,15 @@ Edit `config.json` to customize your company information:
 
 ```json
 {
-  "company_name": "Your Company Name",
-  "company_address": "123 Business Street\nCity, State 12345",
-  "company_phone": "+1 (555) 123-4567",
-  "company_email": "info@yourcompany.com",
-  "logo_path": "",
+  "company_name": "Madalasa Enterprises",
+  "company_address": "123 MG Road\nBengaluru, Karnataka 12345\nIndia",
+  "company_phone": "+91 1234567890",
+  "company_email": "info@madalasaenterprises.com",
+  "company_website": "www.madalasaenterprises.com",
+  "logo_path": "C:\\Users\\kmanas\\Python\\invoice_generator\\logo.jpg",
   "output_folder": "generated_invoices",
-  "currency_symbol": "$",
-  "thank_you_note": "Thank you for your business!"
+  "currency_symbol": "INR",
+  "thank_you_note": "Thank you for your business! We appreciate your trust in us."
 }
 ```
 
@@ -91,7 +92,7 @@ Edit `config.json` to customize your company information:
 1. Place your logo image (PNG or JPG) in the project folder
 2. Update `logo_path` in `config.json`:
    ```json
-   "logo_path": "company_logo.png"
+   "logo_path": "logo.jpg"
    ```
 
 ### 4. Generate Invoices
@@ -115,7 +116,9 @@ Generated invoices will be saved in the `generated_invoices` folder:
 generated_invoices/
   ├── Invoice_INV-001.pdf
   ├── Invoice_INV-002.pdf
+  ├── Invoice_INV-002.pdf
   └── Invoice_INV-003.pdf
+
 ```
 
 ## 📖 Usage Examples
@@ -131,7 +134,7 @@ Tax: 8.5%
 Discount: 0%
 ```
 
-Result: `Invoice_INV-001.pdf` with calculated total of $1,302.00
+Result: `Invoice_INV-001.pdf` with calculated total of INR1,302.00
 
 ### Example 2: Multi-Item Invoice with Discount
 
@@ -145,7 +148,7 @@ Tax: 10%
 Discount: 10%
 ```
 
-Result: Invoice with subtotal $6,500, discount -$650, tax $585, total $6,435
+Result: Invoice with subtotal INR6,500, discount -INR650, tax INR585, total INR6,435
 
 ### Example 3: Batch Processing
 
@@ -270,16 +273,16 @@ Simply add columns to your Excel file and modify the code accordingly.
 │  ┌──────────────┬──────┬────────┬─────────────┐      │
 │  │ Item         │ Qty  │ Price  │ Total       │      │
 │  ├──────────────┼──────┼────────┼─────────────┤      │
-│  │ Laptop       │ 2    │ $1200  │ $2,400.00   │      │
-│  │ Mouse        │ 2    │ $25    │ $50.00      │      │
-│  │ Cable        │ 5    │ $15    │ $75.00      │      │
+│  │ Laptop       │ 2    │ INR1200  │ INR2,400.00   │      │
+│  │ Mouse        │ 2    │ INR25    │ INR50.00      │      │
+│  │ Cable        │ 5    │ INR15    │ INR75.00      │      │
 │  └──────────────┴──────┴────────┴─────────────┘      │
 │                                                         │
-│                          Subtotal: $2,525.00           │
-│                     Discount (5%): -$126.25            │
-│              Subtotal after Discount: $2,398.75        │
-│                         Tax (8.5%): $203.89            │
-│                  Total Amount Due: $2,602.64           │
+│                          Subtotal: INR2,525.00           │
+│                     Discount (5%): -INR126.25            │
+│              Subtotal after Discount: INR2,398.75        │
+│                         Tax (8.5%): INR203.89            │
+│                  Total Amount Due: INR2,602.64           │
 │                                                         │
 │          Thank you for your business!                  │
 └─────────────────────────────────────────────────────────┘
