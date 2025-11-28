@@ -1,0 +1,11 @@
+{
+  "company_name": "Madalasa Enterprises",
+  "company_address": "123 MG Road\nBengaluru, Karnataka 12345\nIndia",
+  "company_phone": "+91 1234567890",
+  "company_email": "info@madalasaenterprises.com",
+  "company_website": "www.madalasaenterprises.com",
+  "logo_path": "C:\\Users\\kmanas\\Python\\invoice_generator\\logo.jpg",
+  "output_folder": "generated_invoices",
+  "currency_symbol": "INR",
+  "thank_you_note": "Thank you for your business! We appreciate your trust in us."
+}
