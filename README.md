@@ -32,7 +32,7 @@ A professional Python application that automatically generates beautiful PDF inv
 
 ## 📊 Excel File Format
 
-Your Excel file should have the following columns:
+Your Excel file might look like below with 100 new invoice entries:
 
 | Invoice Number | Customer Name | Address | Phone Number | Date | Item Name | Quantity | Price | Tax % | Discount % |
 |----------------|---------------|---------|--------------|------|-----------|----------|-------|-------|------------|
@@ -57,7 +57,7 @@ Generate a sample Excel file to see the expected format:
 python create_sample_data.py
 ```
 
-This creates `sample_invoices.xlsx` with 3 sample invoices.
+This creates `sample_invoices.xlsx` with 100 sample invoices.
 
 ### 2. Configure Your Company Details
 
@@ -117,7 +117,8 @@ generated_invoices/
   ├── Invoice_INV-001.pdf
   ├── Invoice_INV-002.pdf
   ├── Invoice_INV-002.pdf
-  └── Invoice_INV-003.pdf
+  ├── Invoice_INV-xxx.pdf
+  └── Invoice_INV-100.pdf
 
 ```
 
@@ -134,7 +135,7 @@ Tax: 8.5%
 Discount: 0%
 ```
 
-Result: `Invoice_INV-001.pdf` with calculated total of INR1,302.00
+Result: `Invoice_INV-001.pdf` with calculated total of INR13020.00
 
 ### Example 2: Multi-Item Invoice with Discount
 
@@ -148,7 +149,7 @@ Tax: 10%
 Discount: 10%
 ```
 
-Result: Invoice with subtotal INR6,500, discount -INR650, tax INR585, total INR6,435
+Result: Invoice with subtotal INR65000, discount -INR6500, tax INR5850, total INR6,4350
 
 ### Example 3: Batch Processing
 

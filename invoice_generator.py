@@ -26,8 +26,19 @@ class InvoiceGenerator:
     def load_config(self, config_file):
         """Load configuration from JSON file"""
         if os.path.exists(config_file):
-            with open(config_file, 'r') as f:
-                config = json.load(f)
+            # Try reading config as UTF-8 first, fall back to cp1252 if needed
+            try:
+                with open(config_file, 'r', encoding='utf-8') as f:
+                    config = json.load(f)
+            except UnicodeDecodeError:
+                try:
+                    with open(config_file, 'r', encoding='cp1252') as f:
+                        config = json.load(f)
+                except Exception as e:
+                    # If JSON parsing fails or other errors occur, raise a helpful error
+                    raise RuntimeError(f"Failed to read config file '{config_file}': {e}")
+            except Exception as e:
+                raise RuntimeError(f"Failed to read config file '{config_file}': {e}")
         else:
             # Default configuration
             config = {

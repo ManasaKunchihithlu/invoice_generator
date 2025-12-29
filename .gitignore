@@ -29,6 +29,10 @@ wheels/
 # Generated PDFs
 generated_invoices/*.pdf
 
+# Uploaded files
+uploads/*.xlsx
+uploads/*.xls
+
 # IDE
 .vscode/
 .idea/
